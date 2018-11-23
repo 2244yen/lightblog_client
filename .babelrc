@@ -1,0 +1,10 @@
+{
+  "presets" : ["env", "es2015", "react", "stage-0"],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    ["transform-runtime", {
+      "regenerator": true
+    }]
+  ]
+}

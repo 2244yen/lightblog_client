@@ -1,0 +1,33 @@
+.blog-navbar {
+  border-radius: 0;
+  background-color: #fff;
+  &.navbar-default {
+    background-color: #fff;
+    border-color: transparent;
+    border-radius: 0;
+    ul {
+      li {
+        a {
+            font-weight: 600;
+            color: #9b9b9b;
+        }
+      }
+      &.navbar-right {
+        li {
+          a {
+            color: #03a87c;
+          }
+        }
+      }
+    }
+    border-bottom: 1px solid #ddd;
+  }
+  &.navbar-fixed-top {
+    box-shadow: 0 3px 5px #ddd;
+  }
+  .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

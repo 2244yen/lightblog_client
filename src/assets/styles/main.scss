@@ -1,0 +1,628 @@
+@import '~font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css?family=Nunito|Poppins:500|Open+Sans');
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "./variables.scss";
+
+body,
+html {
+  height: 100%;
+  background-color: #fff;
+  color: rgba(0, 0, 0, .75);
+  font-family: 'Nunito';
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+.bottom-30 {
+  margin-bottom: 30px;
+}
+
+.left-10 {
+  margin-left: 10px;
+}
+
+.right-10 {
+  margin-right: 10px;
+}
+
+.width-100 {
+  width: 100%;
+}
+.blog-item_tags, .widget-tags {
+  ul {
+    li {
+      float: left;
+      a {
+        background-color: #767676;
+        border-radius: 0 2px 2px 0;
+        color: #fff;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.2727272727;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        padding: 3px 7px;
+        position: relative;
+      }
+      &:hover {
+        a {
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
+.popover-link {
+  position: relative
+}
+
+a:hover {
+  color: $main-color;
+  text-decoration: none;
+}
+
+.user-popover {
+  display: block !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  min-width: 310px;
+  padding: 18px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+  max-height: 200px;
+  z-index: 20
+}
+
+.user-popover .po-username,
+.user-popover .po-description {
+  margin: 0
+}
+
+.user-popover .up-main {
+  margin-bottom: 20px
+}
+
+.user-popover .up-metadata {
+  padding-right: 12px
+}
+
+.user-popover .po-username {
+  font-size: 18px;
+  margin-bottom: 8px
+}
+
+.user-popover .po-username a {
+  color: rgba(0, 0, 0, 0.8)
+}
+
+.user-popover .po-description {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.44)
+}
+
+.user-popover .po-location {
+  margin-top: 4px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.44)
+}
+
+.user-popover .po-location .fa-map-marker {
+  color: tomato;
+  margin-right: 4px
+}
+
+.user-popover .po-metadata {
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0
+}
+
+.user-popover .user-follow-container {
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0
+}
+
+.user-popover .following-metadata {
+  margin: 0 !important
+}
+
+.user-popover .following-count,
+.user-popover .follower-count {
+  color: rgba(0, 0, 0, 0.44) !important;
+  font-size: 14px !important;
+  cursor: default !important
+}
+
+.user-popover .following-count {
+  margin-right: 18px
+}
+
+.user-popover .unfollow-button {
+  font-size: 11px;
+  width: 72px
+}
+
+.user-popover .follow-button {
+  font-size: 11px
+}
+
+.user-popover .follow-button,
+.user-popover .unfollow-button {
+  top: -3px
+}
+
+.po-buffer-bottom {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%)
+}
+
+.po-buffer-top {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%)
+}
+
+.signin-wrapper {
+  margin-top: 80px
+}
+
+.omniauth-button-group {
+  text-align: center
+}
+
+.omniauth-button-group .signin-signup-link {
+  color: #00ab6b
+}
+
+.omniauth-button {
+  margin: 30px 0
+}
+
+.omniauth-button .button {
+  font-size: 16px;
+  display: inline-block;
+  width: 232px;
+  color: #ffffff;
+  text-align: left;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+.omniauth-button .facebook {
+  background-color: #3b5998
+}
+
+.omniauth-button .facebook:hover {
+  background-color: #2d4373
+}
+
+.omniauth-button .google {
+  background-color: #dd4b39
+}
+
+.omniauth-button .google:hover {
+  background-color: #c23321
+}
+
+.omniauth-button .twitter {
+  background-color: #00aced
+}
+
+.omniauth-button .twitter:hover {
+  background-color: #0087ba
+}
+
+.omniauth-button i.fa {
+  margin-right: 13px
+}
+
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+  transition: opacity 0.3s, visibility 0s 0.3s
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s
+}
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg)
+}
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg)
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 10000
+}
+
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  color: rgba(0, 0, 0, 0.44);
+  font-size: 22px;
+  background-color: transparent;
+  outline: none;
+  z-index: 100
+}
+
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative
+}
+
+.overlay ul li {
+  display: block
+}
+
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+  transition: opacity 0.3s, visibility 0s 0.3s
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s
+}
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg)
+}
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg)
+}
+
+.overlay-hugeinc nav.users-overlay {
+  top: 35%
+}
+
+.overlay-hugeinc nav.users-overlay ul>li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 420px;
+  margin: 35px 0;
+  position: relative;
+  text-align: left
+}
+
+.overlay-hugeinc nav.users-overlay ul>li button {
+  position: absolute;
+  right: -20px
+}
+
+.overlay-hugeinc nav.users-overlay ul>li img {
+  margin-right: 20px
+}
+
+.overlay-hugeinc nav.users-overlay ul>li .overlay-user-info {
+  color: rgba(0, 0, 0, 0.6);
+  width: 61%
+}
+
+.overlay-hugeinc nav.users-overlay .pagination-button-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.overlay-hugeinc nav.users-overlay .pagination-button-group .button {
+  cursor: pointer
+}
+
+.alert-message {
+  position: fixed;
+  min-width: 360px;
+  text-align: center;
+  border-radius: 0;
+  top: 0;
+  left: 50%;
+  z-index: 9999;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: -webkit-transform 550ms ease-in;
+  transition: -webkit-transform 550ms ease-in;
+  transition: transform 550ms ease-in;
+  transition: transform 550ms ease-in, -webkit-transform 550ms ease-in
+}
+
+.alert-message.slideup {
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%)
+}
+
+#notifications a.dropdown-toggle.active {
+  background-color: rgba(0, 171, 107, 0.8)
+}
+
+#notifications a.dropdown-toggle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-top: 5px;
+  position: relative;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  border-radius: 50%
+}
+
+#notifications a.dropdown-toggle i.fa-bell-o,
+#notifications a.dropdown-toggle span#new-notifications-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.3em
+}
+
+#notifications a.dropdown-toggle #bell {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+#notifications a.dropdown-toggle span#new-notifications-count {
+  color: #ffffff
+}
+
+#notifications a.dropdown-toggle:hover {
+  border: 1.5px solid rgba(0, 0, 0, 0.3)
+}
+
+.notification-container .dropdown-menu {
+  width: 360px;
+  margin-top: 9px
+}
+
+.notification-container .notification-header {
+  padding: 4px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  color: rgba(0, 0, 0, 0.8)
+}
+
+.notification-container .mark-all-as-read {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.notification-container .mark-all-as-read:hover,
+.notification-container .mark-all-as-read:active {
+  color: #00ab6b
+}
+
+.notification-container .notifications-list {
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 440px;
+  list-style: none;
+  padding: 0
+}
+
+.notification-container .notifications-list .load-more {
+  text-align: center
+}
+
+.notification-container .dropdown-arrow-top {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  z-index: 20;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  right: 10px;
+  top: -10px
+}
+
+.notification-container .dropdown-arrow-bottom {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  z-index: 10;
+  border-bottom: 11px solid rgba(0, 0, 0, 0.11);
+  position: absolute;
+  right: 8px;
+  top: -11px
+}
+
+.notifications-list .avatar-image {
+  margin-right: 18px;
+  vertical-align: baseline
+}
+
+.notifications-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0
+}
+
+.notifications-list li.unread-notification {
+  border-left: 2px solid #00ab6b
+}
+
+.notifications-list li>a {
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  padding: 3px 0 3px 20px;
+  clear: both;
+  white-space: nowrap;
+  font-weight: normal;
+  -webkit-transition: color 200ms;
+  transition: color 200ms
+}
+
+.notifications-list li>a:hover {
+  color: rgba(0, 0, 0, 0.8)
+}
+
+.notifications-list .notification-metadata {
+  display: inline-block
+}
+
+.notifications-list .fa {
+  margin-right: 8px
+}
+
+.notifications-list .fa-heart-o {
+  color: #e81c4f
+}
+
+.notifications-list .fa-user {
+  color: lightblue
+}
+
+.notifications-list .fa-commenting-o {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.no-notifications {
+  margin: 10px 11px 8px 10px;
+  padding: 10px;
+  text-align: center;
+  position: relative
+}
+
+.no-notifications .speech-bubble {
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  padding: 10px;
+  border-radius: 3px;
+  width: 170px;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.no-notifications .speech-arrow-top {
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  z-index: 20;
+  border-top: 10px solid #fff;
+  position: absolute;
+  right: 46.7%;
+  top: 36.5%
+}
+
+.no-notifications .speech-arrow-bottom {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  z-index: 10;
+  border-top: 11px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 46.3%;
+  top: none
+}
+
+.no-notifications .ringer {
+  margin: 0 auto;
+  width: 50px;
+  margin-top: 20px
+}
+
+.bell-jar,
+.mouth,
+.eye {
+  opacity: 0.2;
+  fill: #000000
+}

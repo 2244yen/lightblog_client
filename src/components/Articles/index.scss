@@ -1,0 +1,20 @@
+.blog {
+  padding-bottom: 30px;
+  .blog-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    .blog-item_title {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .blog-item_metadata {
+      small {
+        margin-right: 10px;
+        color: #767676;
+      }
+    }
+    .blog-item_tags {
+    }
+  }
+}
