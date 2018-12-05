@@ -57,7 +57,11 @@ const config = {
     new HtmlWebpackPlugin({
       inject: true,
       template: './public/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
     }),
     new webpack.DefinePlugin({ 
       'process.env.NODE_ENV': JSON.stringify(MODE === 'development' ? 'development' : 'production') 

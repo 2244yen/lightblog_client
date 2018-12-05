@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://2244yen.github.io/lightblog_client/",
+  "homepage": "https://2244yen.github.io/lightblog_client",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack-dev-server --watch --config webpack.dev.js --open",
+    "build": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js",
+    "dev": "webpack-dev-server --mode development --watch --config webpack.dev.js --open",
     "start": "gh-pages -d dist"
   },
   "keywords": [],
