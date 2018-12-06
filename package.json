@@ -9,7 +9,7 @@
     "deploy": "gh-pages -d dist",
     "build": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js",
     "dev": "webpack-dev-server --mode development --watch --config webpack.dev.js --open",
-    "start": "gh-pages -d dist"
+    "start": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js"
   },
   "keywords": [],
   "author": "",
