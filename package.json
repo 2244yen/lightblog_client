@@ -7,9 +7,10 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "heroku-postbuild": "webpack -p",
     "build": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js",
     "dev": "webpack-dev-server --mode development --watch --config webpack.dev.js --open",
-    "start": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -45,10 +46,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
+    "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.0.1",
     "history": "^4.7.2",
     "moment": "^2.22.2",
+    "path": "^0.12.7",
     "prop-types": "^15.6.2",
     "pubsub-js": "^1.7.0",
     "react": "^16.5.2",
