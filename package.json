@@ -10,7 +10,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "heroku-postbuild": "webpack -p",
+    "heroku-postbuild": "webpack --mode production --config  webpack.prod.js",
     "build": "rm -rf ./dist/ && webpack --mode production --config  webpack.prod.js",
     "dev": "webpack-dev-server --mode development --watch --config webpack.dev.js --open",
     "start": "node server.js"
