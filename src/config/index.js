@@ -1,3 +1,3 @@
 export default {
-  API_URL : "http://localhost:8000/api"
+  API_URL : "https://lightblog-server.herokuapp.com/api"
 }
