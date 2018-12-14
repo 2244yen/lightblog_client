@@ -8,8 +8,8 @@ export function* watchSetUser () {
 
 function* saveUserSaga (action) {
   try {
-    const isExisted = yield apiUser.getUserByEmail(action.user.email)
-    console.log(isExisted)
+    const isExisted = apiUser.getUserByEmail(action.user.email)
+    console.log('status', isExisted)
     if (isExisted.message === 'success') {
       isExisted.data.token = action.user.token
       yield sessionStorage.setItem('auth', JSON.stringify(isExisted.data))
@@ -29,6 +29,7 @@ function* saveUserSaga (action) {
     }
     
   } catch (err) {
+    console.log('status 1')
     console.log(err)
   }
 }

@@ -24,6 +24,7 @@ class Login extends Component {
           name: res.profileObj.name,
           username: res.profileObj.familyName + res.profileObj.givenName
       }
+      console.log('user', postData)
       this.props.signInUser(postData)
       this.props.toggleClose()
     }
